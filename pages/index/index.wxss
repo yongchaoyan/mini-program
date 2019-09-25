@@ -1,0 +1,68 @@
+@import 'weui.wxss';
+page{
+background: #36c9ea;
+  font-size: 16px;
+    background:url("") no-repeat 0 0;
+background-size: 100% auto;
+}
+.container {
+  padding:20rpx 0;
+}
+
+
+.scrollview, .inputView{
+  width:80%;
+  margin: 10rpx 30rpx 0rpx 30rpx;
+   border:  1rpx solid #29d66b;
+   border-radius: 25rpx;
+}
+.scrollview{
+  margin-top:0prx;
+  color: #29d66b;
+}
+.itemview{
+
+  margin: 10rpx 20rpx 0rpx;
+  background-color: #e2f3f7;
+}
+.itemview text{
+  margin-left: 100rpx;
+}
+.inputView input{
+ height:100rpx;
+ margin-left: 26rpx;
+  font-size: 12px;
+}
+.result .type text{
+ display:inline;
+}
+
+.result{
+  width:90%;
+  margin: 106rpx 20rpx;
+}
+.result text{
+  display:block;
+  line-height:58rpx;
+}
+.icon-in-box{
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+.weui-cell__ft_callback {
+  text-align: right;
+  color: rgb(90, 240, 123);
+}
+.weui-cell__ft_harm {
+  text-align: right;
+  color: rgb(238, 36, 14);
+}
+.weui-cell__ft_wet {
+  text-align: right;
+  color: rgb(180, 173, 172);
+}
+.weui-cell__ft_bad {
+  text-align: right;
+  color: rgb(17, 13, 12);
+}

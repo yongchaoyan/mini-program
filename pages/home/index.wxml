@@ -1,0 +1,99 @@
+<!--添加到小程序<add-tips/>-->
+
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title"></view>
+    <view class="page__desc"></view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" bindtap="bindtap" confirm-type="done" value="{{inputValue}}" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="bindtap">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <image class="camera" src="/images/camera.png" bindtap="addapimg" />
+    </view>
+  </view>
+
+  <view class="page__bd">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">常见垃圾分类</view>
+      <view class="weui-panel__bd">
+        <navigator url="/pages/detail/index?navbarActiveIndex=0" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="/images/recycle.png" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">可回收垃圾</view>
+            <view class="weui-media-box__desc">废纸张、废塑料、废玻璃制品、废金属、废织物等适宜回收、可循环利用的生活废弃物</view>
+          </view>
+        </navigator>
+        <navigator url="/pages/detail/index?navbarActiveIndex=1" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="/images/harm.png" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">有害垃圾</view>
+            <view class="weui-media-box__desc">废电池、废灯管、废药品、废油漆及其容器等对人体健康或者自然环境造成直接或者潜在危害的生活废弃物</view>
+          </view>
+        </navigator>
+        <navigator url="/pages/detail/index?navbarActiveIndex=2" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="/images/wet.png" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">湿垃圾</view>
+            <view class="weui-media-box__desc">即易腐垃圾、剩菜剩饭、过期食品、瓜皮果核、花卉绿植、中药药渣等易腐的生物质生活废弃物</view>
+          </view>
+        </navigator>
+        <navigator url="/pages/detail/index?navbarActiveIndex=3" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="/images/dry.png" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">干垃圾</view>
+            <view class="weui-media-box__desc">干垃圾即其它垃圾，指除可回收物、有害垃圾、厨余垃圾（湿垃圾）以外的其它生活废弃物</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!--
+  <div class="but">
+    <button class=" btn1" open-type='share'>
+      <image class='btnImg' src='/images/share.png'></image>
+      <view>分享</view>
+    </button>
+    <br/>
+    <button class=" btn2" open-type='contact'>
+      <image class='btnImg' src='/images/message.png'></image>
+      <view>留言</view>
+    </button>
+  </div>
+  -->
+  <view class="flex-wrp" style="flex-direction:column;">
+    <view>
+      <button class='back-btn' open-type='share'>
+        <view class='text-back'>
+          <text>分享</text>
+        </view>
+      </button>
+    </view>
+    <view>
+      <button class='share-btn' open-type='contact'>
+        <view class='text-share'>
+          <text>留言</text>
+        </view>
+      </button>
+    </view>
+  </view>
+</view>

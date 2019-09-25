@@ -1,0 +1,2 @@
+<!--pages/imageAndText/index.wxml-->
+<image src = "http://imglife.gmw.cn/attachement/jpg/site2/20190711/f44d305ea4b61e90efbd4c.jpg" mode="widthFix" style="width:100%" ></image>

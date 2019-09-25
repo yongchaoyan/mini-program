@@ -1,0 +1,40 @@
+<view class="page">
+  <view class="page">
+    <view class="page__hd">
+      <view class="page__title"></view>
+      <view class="page__desc"></view>
+    </view>
+    <view class="page__bd">
+      <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="bindinput" confirm-type="done" value="{{inputValue}}" />
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+              <icon type="clear" size="14"></icon>
+            </view>
+          </view>
+          <label class="weui-search-bar__label" fouce = "true" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">搜索</view>
+          </label>
+        </view>
+        <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="goBack">返回</view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:for="{{bindSource}}">
+    <view id="{{index}}" bindtap="query">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">{{item.name}}</view>
+          <view class="weui-cell__ft_callback" wx:if="{{item.type == 0}}">可回收垃圾</view>
+          <view class="weui-cell__ft_harm" wx:elif="{{item.type == 1}}">有害垃圾</view>
+          <view class="weui-cell__ft_wet" wx:elif="{{item.type == 2}}">厨余（湿）垃圾</view>
+          <view class="weui-cell__ft_dry" wx:elif="{{item.type == 3}}">其他（干）垃圾</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

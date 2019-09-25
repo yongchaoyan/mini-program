@@ -1,0 +1,28 @@
+<view class="movie-container">
+  <!-- 导航栏 -->
+  <view class="navbar">
+    <block wx:for="{{navbarTitle}}" wx:key="index">
+      <view class="navbar-item " data-navbar-index="{{index}}" catchtap="onNavBarTap">
+        <text>{{item}}</text>
+      </view>
+      <view class="line" style="width:{{100/navbarTitle.length}}%;transform:translateX({{100*navbarActiveIndex}}%);"></view>
+    </block>
+  </view>
+</view>
+
+
+
+<view class="movie-content-wrapper">
+  <swiper class="detail-image" current="{{navbarActiveIndex}}" bindchange="onBindAnimationFinish">
+    <!-- 这里可以自定义组件，我为了方便直接for的数据 -->
+    <!-- 自定义组件 放在<scroll-view>里面代替 {{item}}  -->
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <view class='imagesize'>
+          <image src="{{item}}" class='in-image'  style="width:750rpx;height: 1375rpx;">
+          </image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
